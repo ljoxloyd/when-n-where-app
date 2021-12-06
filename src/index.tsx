@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './Assets/global.css'
+import './Assets/tailwind.css'
+import './Assets/custom-elements.ts'
+import 'react-toastify/dist/ReactToastify.min.css'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './Components/App'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import dayjs from 'dayjs'
+import localeData from 'dayjs/plugin/localeData'
+import isoWeek from 'dayjs/plugin/isoWeek'
+import isBetween from 'dayjs/plugin/isBetween'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+dayjs.extend(localeData)
+dayjs.extend(isoWeek)
+dayjs.extend(isBetween)
+
+ReactDOM.render(<App />, document.getElementById('root'))

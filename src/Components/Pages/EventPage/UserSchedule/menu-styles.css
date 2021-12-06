@@ -1,0 +1,36 @@
+.user-schedule__grid-template {
+  grid-template-columns: 3fr 4fr;
+  margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.user-schedule__separator {
+  --color: #e5e7eb;
+  padding: 0 0 0 0.5rem;
+  border-left: 2px solid var(--color);
+}
+
+@media screen and (max-width: 500px) {
+  .user-schedule__grid-template {
+    grid-template-columns: auto;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .user-schedule__separator {
+    padding: 0.5rem 0 0 0;
+    border-left: 0;
+    border-top: 2px solid var(--color);
+    margin: 0.5rem 0;
+  }
+}
+
+.menu-in-free > *:nth-child(2) { order: 1; } /* Header "I'm available" */
+.menu-in-free > *:nth-child(1) { order: 2; } /* Menu */
+.menu-in-free > *:nth-child(3) { order: 3; } /* List whenFree */
+.menu-in-free > *:nth-child(4) { order: 4; } /* Header "Except for" */
+.menu-in-free > *:nth-child(5) { order: 6; } /* List whenBusy */
+
+.menu-in-busy > *:nth-child(2) { order: 1; } /* Header "I'm available" */
+.menu-in-busy > *:nth-child(3) { order: 3; } /* List whenFree */
+.menu-in-busy > *:nth-child(4) { order: 4; } /* Header "Except for" */
+.menu-in-busy > *:nth-child(1) { order: 5; } /* Menu */
+.menu-in-busy > *:nth-child(5) { order: 6; } /* List whenBusy */
