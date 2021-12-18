@@ -1,4 +1,4 @@
-import { createSlice, CreateSliceOptions, Middleware, nanoid, PayloadAction } from "@reduxjs/toolkit"
+import { createSlice, CreateSliceOptions, nanoid, PayloadAction } from "@reduxjs/toolkit"
 
 import { getStateFromLS } from "../../Shared/utils"
 import { STORAGE_KEY, DEFAULTS } from "../../Shared/constants"

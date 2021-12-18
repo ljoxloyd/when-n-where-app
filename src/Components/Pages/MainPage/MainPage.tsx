@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import TelegramLogin from './TgLogin/TgLogin'
 import Select from '../../../Store/selectors'
@@ -47,7 +47,7 @@ const MainPage = () => {
 
   const onAuth = useCallback((user: TelegramUser) => {
     authTelegramUser(user).then(user => dispatch(AuthActions.setUser(user)))
-  }, [])
+  }, [dispatch])
 
   return (
     <main className="container grid grid-cols-3 items-center" style={{ height: '80vh' }}>

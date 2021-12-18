@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useState } from "react"
+import { Fragment } from "react"
 import { Switch, Disclosure } from "@headlessui/react"
 import { AnimatePresence } from "framer-motion"
 import { useMediaQuery } from "../../../../../Shared/hooks"

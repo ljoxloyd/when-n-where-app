@@ -1,4 +1,5 @@
-import React, { useEffect, useMemo, useRef } from "react"
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useRef } from "react"
 import { toast, ToastOptions } from "react-toastify"
 
 
